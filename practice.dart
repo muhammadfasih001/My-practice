@@ -247,4 +247,6 @@ void main() {
       print("$entNum is Odd but not divisible by 7");
     }
   }
+
+  //Q.10: Write a program that takes three numbers from the user and prints the greatest number & lowest number.
 }
