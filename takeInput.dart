@@ -231,22 +231,56 @@ void main() {
 
   //Q.9: Check if the number is even or odd, If number is even then check if this is divisible by 5 or not & if number is odd then check if this is divisible by 7 or not.
 
-  stdout.write("Enter Your Number: ");
-  int entNum = int.parse(stdin.readLineSync()!);
+  // stdout.write("Enter Your Number: ");
+  // int entNum = int.parse(stdin.readLineSync()!);
 
-  if (entNum % 2 == 0) {
-    if (entNum % 5 == 0) {
-      print("$entNum is even and divisible by 5");
-    } else {
-      print("$entNum is even but not divisible by 5");
-    }
-  } else {
-    if (entNum % 7 == 0) {
-      print("$entNum is Odd divisible by 7");
-    } else {
-      print("$entNum is Odd but not divisible by 7");
-    }
-  }
+  // if (entNum % 2 == 0) {
+  //   if (entNum % 5 == 0) {
+  //     print("$entNum is even and divisible by 5");
+  //   } else {
+  //     print("$entNum is even but not divisible by 5");
+  //   }
+  // } else {
+  //   if (entNum % 7 == 0) {
+  //     print("$entNum is Odd divisible by 7");
+  //   } else {
+  //     print("$entNum is Odd but not divisible by 7");
+  //   }
+  // }
 
   //Q.10: Write a program that takes three numbers from the user and prints the greatest number & lowest number.
+
+  stdout.write("Enter your 1st number: ");
+  int num1 = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter your 2nd number: ");
+  int num2 = int.parse(stdin.readLineSync()!);
+
+  stdout.write("Enter your 3rd number: ");
+  int num3 = int.parse(stdin.readLineSync()!);
+
+  int greatestNum;
+  int lowestNum;
+
+  if (num1 > num2 && num1 > num3) {
+    greatestNum = num1;
+    print("$num1 is the greatest number");
+  } else if (num2 > num1 && num2 > num3) {
+    greatestNum = num2;
+    print("$num2 is the greatest number");
+  } else {
+    greatestNum = num3;
+    print("$num3 is the greatest number");
+  }
+
+  if (num1 < num2 && num1 < num3) {
+    lowestNum = num1;
+    print("$num1 is the lowest number");
+  } else if (num2 < num1 && num2 < num3) {
+    lowestNum = num2;
+    print("$num2 is the lowest number");
+  } else {
+    lowestNum = num3;
+    print("$num3 is the lowest number");
+  }
 }
