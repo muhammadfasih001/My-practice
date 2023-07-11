@@ -251,39 +251,39 @@ void main() {
 
   //Q.10: Write a program that takes three numbers from the user and prints the greatest number & lowest number.
 
-  // stdout.write("Enter your 1st number: ");
-  // int num1 = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter your 1st number: ");
+  int num1 = int.parse(stdin.readLineSync()!);
 
-  // stdout.write("Enter your 2nd number: ");
-  // int num2 = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter your 2nd number: ");
+  int num2 = int.parse(stdin.readLineSync()!);
 
-  // stdout.write("Enter your 3rd number: ");
-  // int num3 = int.parse(stdin.readLineSync()!);
+  stdout.write("Enter your 3rd number: ");
+  int num3 = int.parse(stdin.readLineSync()!);
 
-  // int greatestNum;
-  // int lowestNum;
+  int greatestNum;
+  int lowestNum;
 
-  // if (num1 > num2 && num1 > num3) {
-  //   greatestNum = num1;
-  //   print("$num1 is the greatest number");
-  // } else if (num2 > num1 && num2 > num3) {
-  //   greatestNum = num2;
-  //   print("$num2 is the greatest number");
-  // } else {
-  //   greatestNum = num3;
-  //   print("$num3 is the greatest number");
-  // }
+  if (num1 > num2 && num1 > num3) {
+    greatestNum = num1;
+    print("$num1 is the greatest number");
+  } else if (num2 > num1 && num2 > num3) {
+    greatestNum = num2;
+    print("$num2 is the greatest number");
+  } else {
+    greatestNum = num3;
+    print("$num3 is the greatest number");
+  }
 
-  // if (num1 < num2 && num1 < num3) {
-  //   lowestNum = num1;
-  //   print("$num1 is the lowest number");
-  // } else if (num2 < num1 && num2 < num3) {
-  //   lowestNum = num2;
-  //   print("$num2 is the lowest number");
-  // } else {
-  //   lowestNum = num3;
-  //   print("$num3 is the lowest number");
-  // }
+  if (num1 < num2 && num1 < num3) {
+    lowestNum = num1;
+    print("$num1 is the lowest number");
+  } else if (num2 < num1 && num2 < num3) {
+    lowestNum = num2;
+    print("$num2 is the lowest number");
+  } else {
+    lowestNum = num3;
+    print("$num3 is the lowest number");
+  }
 
 //Q.11: Write a program to Calculate root of any number.
 // i.e: √y = y½
