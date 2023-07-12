@@ -22,6 +22,10 @@ void main() {
       englisMark: 65,
       chemMark: 55,
       phymark: 75));
+
+  print("");
+
+  print(studentRecords());
 }
 
 String studenMarkSheet(
@@ -69,6 +73,42 @@ String studenMarkSheet(
   print("Physics Mark: $phymark");
   print("Obtained Mark: $obtainedMark / Total Mark: $totalMark");
   print("Percentage: $percentage");
+
+  return grade;
+}
+
+studentRecords() {
+  String name = "muhammad fasih";
+  num science = 86;
+  num math = 50.5;
+  num english = 40;
+  num urdu = 80;
+  num chem = 55.8;
+  String grade;
+
+  num obtainMark = 500;
+
+  num totalMark = science + math + urdu + chem + english;
+
+  num percentage = totalMark / obtainMark * 100;
+  percentage = double.parse(percentage.toStringAsFixed(2));
+
+  if (percentage >= 80) {
+    print("${grade = "Grade: A+"}");
+  } else if (percentage >= 70) {
+    print("${grade = "Grade: A"}");
+  } else if (percentage >= 60) {
+    print("${grade = "Grade: B"}");
+  } else if (percentage >= 50) {
+    print("${grade = "Grade: C"}");
+  } else if (percentage >= 40) {
+    print("${grade = "Grade: D"}");
+  } else {
+    print("${grade = "Grade: Fail"}");
+  }
+
+  print("Name: $name");
+  print("percentage: $percentage");
 
   return grade;
 }
