@@ -1,6 +1,22 @@
 import 'dart:io';
 
+//WeekDay Map and List dynamic....
+List<Map<String, dynamic>> WeekDayName = [];
+
 void main() {
+  //Q 11: Write a Dart code that takes in a list and an integer n as parameters. The program should print a new list containing the first n elements from the original list.
+//Function call......
+  originalList([1, 2, 3, 4, 5, 6, 7, 8, 9]);
+
+// Q.4: Create a list of numbers & write a program to get the smallest & greatest number from a list.
+//Function call......
+  processNumber([1, 100, 5, 80, 6]);
+
+  print("");
+
+//Function call......
+  processNumber([1, 700, 5, 6, 10, 88]);
+
 //Q.1: Create a list of names and print all names using the List method.
 
   List<String> allNames = [];
@@ -45,6 +61,22 @@ void main() {
   }
 }
 
+//Function Smallest greatest Number find......
+List<int> processNumber(List<int> numbers) {
+  print("Original List is: $numbers");
+  numbers.sort();
+
+  int smallest = numbers.first;
+  int greatest = numbers.last;
+
+  print("Sorted Numbers List: $numbers");
+  print("Smallest number is: $smallest");
+  print("Greatest number is: $greatest");
+
+  return numbers;
+}
+
+//Add day Function......
 addDay() {
   stdout.write("Enter Week day 1: ");
   String d1 = stdin.readLineSync()!;
@@ -82,25 +114,29 @@ addDay() {
   print("Days added");
 }
 
-List<Map<String, dynamic>> WeekDayName = [];
-
+//Remove Function....
 remove() {
   stdout.write("Enter day you want to remove: ");
   String enter = stdin.readLineSync()!;
 
-  bool foundDay = WeekDayName.any((element) =>
-      element["Day 1"] == enter ||
-      ["Day 2"] == enter ||
-      ["Day 3"] == enter ||
-      ["Day 4"] == enter ||
-      ["Day 5"] == enter ||
-      ["Day 6"] == enter ||
-      ["Day 7"] == enter);
+  bool foundDay = WeekDayName.any((element) => element.containsKey(enter));
 
   if (foundDay) {
-    WeekDayName.removeWhere((element) => element["Day 1"] == enter);
+    WeekDayName.removeWhere((element) => element.containsKey(enter));
     print("Deleted Day");
   } else {
     print("Day Not found");
   }
+}
+
+//Function find first element as a parameter.......
+List<int> originalList(List<int> number) {
+  int n = 5;
+
+  List<int> newList = number.sublist(0, n);
+  print("Original List is: $number");
+  print("Number of element to print: $n");
+  print("New List with first $n element: $newList");
+
+  return newList;
 }
